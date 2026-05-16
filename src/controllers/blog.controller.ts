@@ -116,7 +116,7 @@ export const blogController = {
       layout: "layouts/blog",
       title: "Home",
       meta: {
-        title: "CMS Blog | Artikel SEO, Konten Editorial, dan Panduan Praktis",
+        title: "Motivasi Muslimah | Artikel SEO, Konten Editorial, dan Panduan Praktis",
         description:
           "CMS blog modern dengan artikel SEO, strategi konten, performance, dan desain admin yang rapi.",
         canonical: page > 1 ? buildCanonicalUrl(baseUrl, `/?page=${page}`) : buildCanonicalUrl(baseUrl, "/"),
@@ -232,7 +232,7 @@ export const blogController = {
       layout: "layouts/blog",
       title: category.name,
       meta: {
-        title: `${category.name} | CMS Blog`,
+        title: `${category.name} | Motivasi Muslimah`,
         description: `Kumpulan artikel ${category.name.toLowerCase()} yang tersusun rapi dan SEO friendly.`,
         canonical: buildCanonicalUrl(baseUrl, `/categories/${category.slug}${page > 1 ? `?page=${page}` : ""}`)
       },
@@ -276,7 +276,7 @@ export const blogController = {
       layout: "layouts/blog",
       title: tag.name,
       meta: {
-        title: `${tag.name} | CMS Blog`,
+        title: `${tag.name} | Motivasi Muslimah`,
         description: `Artikel dengan tag ${tag.name.toLowerCase()} yang relevan dan mudah ditemukan lewat pencarian.`,
         canonical: buildCanonicalUrl(baseUrl, `/tags/${tag.slug}${page > 1 ? `?page=${page}` : ""}`)
       },

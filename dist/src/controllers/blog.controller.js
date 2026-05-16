@@ -86,7 +86,7 @@ exports.blogController = {
             layout: "layouts/blog",
             title: "Home",
             meta: {
-                title: "CMS Blog | Artikel SEO, Konten Editorial, dan Panduan Praktis",
+                title: "Motivasi Muslimah | Artikel SEO, Konten Editorial, dan Panduan Praktis",
                 description: "CMS blog modern dengan artikel SEO, strategi konten, performance, dan desain admin yang rapi.",
                 canonical: page > 1 ? (0, meta_1.buildCanonicalUrl)(baseUrl, `/?page=${page}`) : (0, meta_1.buildCanonicalUrl)(baseUrl, "/"),
                 image: (0, meta_1.buildCanonicalUrl)(baseUrl, "/uploads/2026/05/10dbd22d-5644-4174-ab95-d055485e73be.webp")
@@ -191,7 +191,7 @@ exports.blogController = {
             layout: "layouts/blog",
             title: category.name,
             meta: {
-                title: `${category.name} | CMS Blog`,
+                title: `${category.name} | Motivasi Muslimah`,
                 description: `Kumpulan artikel ${category.name.toLowerCase()} yang tersusun rapi dan SEO friendly.`,
                 canonical: (0, meta_1.buildCanonicalUrl)(baseUrl, `/categories/${category.slug}${page > 1 ? `?page=${page}` : ""}`)
             },
@@ -232,7 +232,7 @@ exports.blogController = {
             layout: "layouts/blog",
             title: tag.name,
             meta: {
-                title: `${tag.name} | CMS Blog`,
+                title: `${tag.name} | Motivasi Muslimah`,
                 description: `Artikel dengan tag ${tag.name.toLowerCase()} yang relevan dan mudah ditemukan lewat pencarian.`,
                 canonical: (0, meta_1.buildCanonicalUrl)(baseUrl, `/tags/${tag.slug}${page > 1 ? `?page=${page}` : ""}`)
             },

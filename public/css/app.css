@@ -4,40 +4,44 @@
 
 :root {
   color-scheme: light;
-  --wp-bg: #f0f2f5;
+  --wp-bg: #f8f2ea;
   --wp-surface: #ffffff;
-  --wp-surface-2: #f6f7f7;
-  --wp-surface-3: #eceff3;
-  --wp-border: #dcdcde;
-  --wp-text: #1d2327;
-  --wp-muted: #646970;
-  --wp-primary: #2271b1;
-  --wp-primary-strong: #135e96;
-  --wp-primary-soft: rgba(34, 113, 177, 0.12);
-  --wp-success: #008a20;
-  --wp-warning: #b76e00;
-  --wp-danger: #b32d2e;
-  --wp-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
-  --wp-shadow-strong: 0 1px 2px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.06);
+  --wp-surface-2: #fdf8f2;
+  --wp-surface-3: #f5ede3;
+  --wp-border: #eadfce;
+  --wp-text: #3f332a;
+  --wp-muted: #8a7565;
+  --wp-primary: #8f755f;
+  --wp-primary-strong: #77614f;
+  --wp-primary-soft: rgba(143, 117, 95, 0.14);
+  --wp-success: #6f8a4c;
+  --wp-warning: #b0874f;
+  --wp-danger: #b76c6c;
+  --wp-shadow: 0 10px 26px rgba(74, 53, 38, 0.06);
+  --wp-shadow-strong: 0 16px 44px rgba(74, 53, 38, 0.12);
+  --wp-olive-accent: #7c8661;
+  --wp-rose-accent: #c59a98;
 }
 
 .dark {
   color-scheme: dark;
-  --wp-bg: #0b1120;
-  --wp-surface: #111827;
-  --wp-surface-2: #0f172a;
-  --wp-surface-3: #172033;
-  --wp-border: #243144;
-  --wp-text: #e5eef8;
-  --wp-muted: #9ca3af;
-  --wp-primary: #72aee6;
-  --wp-primary-strong: #3c8dbc;
-  --wp-primary-soft: rgba(114, 174, 230, 0.16);
-  --wp-success: #22c55e;
-  --wp-warning: #f59e0b;
-  --wp-danger: #f87171;
-  --wp-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
-  --wp-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.32);
+  --wp-bg: #1a1714;
+  --wp-surface: #25211d;
+  --wp-surface-2: #312a24;
+  --wp-surface-3: #3a322b;
+  --wp-border: #4a4037;
+  --wp-text: #f5ede2;
+  --wp-muted: #cfbead;
+  --wp-primary: #d7bca4;
+  --wp-primary-strong: #c9a88a;
+  --wp-primary-soft: rgba(215, 188, 164, 0.2);
+  --wp-success: #b4ca8a;
+  --wp-warning: #e0bb86;
+  --wp-danger: #e1a2a2;
+  --wp-shadow: 0 12px 30px rgba(0, 0, 0, 0.34);
+  --wp-shadow-strong: 0 16px 42px rgba(0, 0, 0, 0.48);
+  --wp-olive-accent: #afbc8e;
+  --wp-rose-accent: #d7adab;
 }
 
 .dark .bg-white {
@@ -82,10 +86,11 @@ html {
 
 body {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.5), transparent 22%),
+    radial-gradient(circle at top left, rgba(197, 154, 152, 0.08), transparent 38%),
+    radial-gradient(circle at top right, rgba(124, 134, 97, 0.08), transparent 36%),
     var(--wp-bg);
   color: var(--wp-text);
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -101,14 +106,15 @@ body {
 
 .wp-panel,
 .card {
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   background: var(--wp-surface);
   box-shadow: var(--wp-shadow);
   border: 1px solid var(--wp-border);
+  transition: border-color 180ms ease, box-shadow 200ms ease, transform 180ms ease;
 }
 
 .wp-panel-strong {
-  border-radius: 0.8rem;
+  border-radius: 1.2rem;
   background: var(--wp-surface);
   box-shadow: var(--wp-shadow-strong);
   border: 1px solid var(--wp-border);
@@ -141,8 +147,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  border-radius: 0.55rem;
-  padding: 0.66rem 1rem;
+  border-radius: 999px;
+  padding: 0.72rem 1.1rem;
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
@@ -163,8 +169,8 @@ body {
 .btn-primary {
   background: linear-gradient(180deg, var(--wp-primary) 0%, var(--wp-primary-strong) 100%);
   color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(119, 97, 79, 0.4);
+  box-shadow: 0 8px 20px rgba(119, 97, 79, 0.22);
 }
 
 .wp-btn-primary:hover,
@@ -233,7 +239,7 @@ body {
   background: var(--wp-surface);
   color: var(--wp-text);
   border: 1px solid var(--wp-border);
-  box-shadow: var(--wp-shadow);
+  box-shadow: 0 2px 10px rgba(74, 53, 38, 0.06);
 }
 
 .wp-btn-pill:hover {
@@ -250,7 +256,7 @@ body {
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
-  border-radius: 0.55rem;
+  border-radius: 0.9rem;
 }
 
 .wp-theme-toggle {
@@ -291,7 +297,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0.55rem;
+  border-radius: 0.9rem;
   padding: 0.8rem 0.9rem;
   color: var(--wp-text);
   border: 1px solid transparent;
@@ -311,21 +317,21 @@ body {
 .blog-nav-shell {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border: 1px solid rgba(188, 163, 141, 0.35);
   border-radius: 1.55rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.94) 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(252, 247, 240, 0.97) 100%);
   box-shadow:
-    0 12px 30px rgba(15, 23, 42, 0.09),
+    0 16px 34px rgba(74, 53, 38, 0.11),
     0 1px 0 rgba(255, 255, 255, 0.8) inset;
 }
 
 .dark .blog-nav-shell {
-  border-color: rgba(148, 163, 184, 0.16);
+  border-color: rgba(215, 188, 164, 0.24);
   background:
-    linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(17, 24, 39, 0.94) 100%);
+    linear-gradient(180deg, rgba(37, 33, 29, 0.98) 0%, rgba(26, 23, 20, 0.95) 100%);
   box-shadow:
-    0 14px 34px rgba(2, 6, 23, 0.38),
+    0 16px 36px rgba(0, 0, 0, 0.46),
     0 1px 0 rgba(255, 255, 255, 0.03) inset;
 }
 
@@ -333,11 +339,11 @@ body {
 .blog-search-card {
   position: relative;
   z-index: 1;
-  border: 1px solid rgba(148, 163, 184, 0.18);
+  border: 1px solid rgba(188, 163, 141, 0.3);
   border-radius: 1.4rem;
   background: rgba(255, 255, 255, 0.99);
   box-shadow:
-    0 8px 20px rgba(15, 23, 42, 0.07),
+    0 10px 22px rgba(74, 53, 38, 0.08),
     0 1px 0 rgba(255, 255, 255, 0.82) inset;
 }
 
@@ -356,9 +362,9 @@ body {
 
 .blog-brand-card:hover {
   transform: translateY(-1px);
-  border-color: rgba(34, 113, 177, 0.22);
+  border-color: rgba(124, 134, 97, 0.45);
   box-shadow:
-    0 12px 26px rgba(15, 23, 42, 0.1),
+    0 14px 30px rgba(74, 53, 38, 0.14),
     0 1px 0 rgba(255, 255, 255, 0.82) inset;
 }
 
@@ -381,9 +387,10 @@ body {
 }
 
 .blog-brand-name {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 1.08rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   color: var(--wp-text);
 }
 
@@ -393,7 +400,7 @@ body {
 
 .blog-search-input {
   border-radius: 1.08rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 252, 254, 0.96) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(253, 248, 242, 0.98) 100%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
 
@@ -406,17 +413,17 @@ body {
 
 .dark .blog-brand-card,
 .dark .blog-search-card {
-  border-color: rgba(148, 163, 184, 0.14);
-  background: rgba(15, 23, 42, 0.98);
+  border-color: rgba(215, 188, 164, 0.2);
+  background: rgba(49, 42, 36, 0.98);
   box-shadow:
-    0 10px 22px rgba(2, 6, 23, 0.32),
+    0 12px 24px rgba(0, 0, 0, 0.36),
     0 1px 0 rgba(255, 255, 255, 0.04) inset;
 }
 
 .dark .blog-brand-card:hover {
-  border-color: rgba(114, 174, 230, 0.22);
+  border-color: rgba(175, 188, 142, 0.45);
   box-shadow:
-    0 14px 28px rgba(2, 6, 23, 0.36),
+    0 16px 30px rgba(0, 0, 0, 0.4),
     0 1px 0 rgba(255, 255, 255, 0.04) inset;
 }
 
@@ -468,7 +475,7 @@ body {
 .wp-input,
 .input {
   width: 100%;
-  border-radius: 0.55rem;
+  border-radius: 0.9rem;
   border: 1px solid var(--wp-border);
   background: var(--wp-surface);
   padding: 0.72rem 0.9rem;
@@ -511,8 +518,9 @@ body {
 .article-content h4,
 .article-content h5,
 .article-content h6 {
+  font-family: "Playfair Display", Georgia, serif;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.28;
   color: inherit;
 }
 
@@ -538,7 +546,8 @@ body {
 
 .article-content p,
 .article-content li {
-  line-height: 1.85;
+  line-height: 1.95;
+  color: color-mix(in srgb, var(--wp-text) 92%, #8a7565 8%);
 }
 
 .article-content ul,
@@ -645,9 +654,9 @@ body {
 }
 
 .article-content blockquote {
-  border-left: 4px solid var(--wp-primary);
-  background: var(--wp-primary-soft);
-  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--wp-olive-accent);
+  background: color-mix(in srgb, var(--wp-primary-soft) 58%, #fff 42%);
+  padding: 1.1rem 1.35rem;
   border-radius: 1rem;
   font-style: italic;
 }
@@ -711,14 +720,17 @@ body {
 }
 
 .faq-item[open] {
-  border-color: rgba(34, 113, 177, 0.32);
-  box-shadow: 0 12px 30px rgba(34, 113, 177, 0.08);
+  border-color: rgba(124, 134, 97, 0.36);
+  box-shadow: 0 12px 28px rgba(124, 134, 97, 0.14);
 }
 
 .comment-card {
   box-shadow: var(--wp-shadow);
+  transition: box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .comment-card:hover {
   box-shadow: var(--wp-shadow-strong);
+  border-color: color-mix(in srgb, var(--wp-olive-accent) 35%, var(--wp-border) 65%);
 }
+
