@@ -180,6 +180,7 @@
       width: 100%;
       overflow-x: hidden;
       border-radius: 1.8rem;
+      padding: 0 3.6rem;
     }
 
     .slider-track {
@@ -304,12 +305,19 @@
       margin-top: auto;
     }
 
-    /* SLIDER BUTTONS DI BAWAH (geser kiri/kanan) */
+    /* SLIDER BUTTONS DI DALAM WRAPPER (kiri/kanan tengah vertikal) */
     .slider-controls-bottom {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
       display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1.2rem 0 2rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.8rem;
+      pointer-events: none;
+      z-index: 4;
     }
 
     .slider-btn-bottom {
@@ -323,6 +331,7 @@
       color: #B18664;
       font-size: 1.1rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+      pointer-events: auto;
     }
 
     .slider-btn-bottom:hover {
@@ -469,6 +478,16 @@
       .categories-tags-grid {
         grid-template-columns: 1fr;
       }
+
+      .slider-wrapper {
+        padding: 0 2.9rem;
+      }
+
+      .slider-btn-bottom {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -598,11 +617,10 @@
               </div>
               <% } %>
         </div>
-      </div>
-      <!-- BUTTON GESER KANAN KIRI DI BAWAH SLIDER -->
-      <div class="slider-controls-bottom">
-        <button class="slider-btn-bottom" id="slideLeftBottom"><i class="fas fa-chevron-left"></i></button>
-        <button class="slider-btn-bottom" id="slideRightBottom"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-controls-bottom">
+          <button class="slider-btn-bottom" id="slideLeftBottom"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn-bottom" id="slideRightBottom"><i class="fas fa-chevron-right"></i></button>
+        </div>
       </div>
     </div>
 
