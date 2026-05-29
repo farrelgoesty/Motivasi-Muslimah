@@ -144,7 +144,7 @@ function getYoutubeLabelOptions() {
     return [
         { label: "Auto (Video Pendukung)", value: "AUTO" },
         { label: "Video Pendukung", value: "Video Pendukung" },
-        { label: "Video Kajian", value: "Video Kajian" },
+        { label: "Karir & Produktivitas Muslim", value: "Karir & Produktivitas Muslim" },
         { label: "Video Referensi", value: "Video Referensi" },
         { label: "Video Terkait", value: "Video Terkait" },
         { label: "Dokumentasi Video", value: "Dokumentasi Video" },
